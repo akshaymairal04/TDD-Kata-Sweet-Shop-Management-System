@@ -1,32 +1,32 @@
-🍭 Sweet Shop Management System
+#**🍭 Sweet Shop Management System**
 
-A full-stack web application to help sweet shop owners manage their inventory, sales, staff, and customer orders efficiently. Built with React, Node.js, MongoDB, and motion/react animations for a delightful user experience.
+##A full-stack web application to help sweet shop owners manage their inventory, sales, staff, and customer orders efficiently. Built with React, Node.js, MongoDB, and motion/react animations for a delightful user experience.
 
-🚀 Features
+**🚀 Features**
 
-✨ User Authentication: Secure login and registration with JWT.
+##✨ User Authentication: Secure login and registration with JWT.
 
-🍬 Inventory Management: Track sweets, stock levels, and restocking.
+##🍬 Inventory Management: Track sweets, stock levels, and restocking.
 
-💵 Sales & Billing: Manage orders, generate invoices, and track revenue.
+##💵 Sales & Billing: Manage orders, generate invoices, and track revenue.
 
-👩‍🍳 Staff Management: Monitor tasks and performance of shop staff.
+##👩‍🍳 Staff Management: Monitor tasks and performance of shop staff.
 
-📊 Dashboard: Visual representation of sales, inventory, and orders.
+##📊 Dashboard: Visual representation of sales, inventory, and orders.
 
-🎨 Sweet-themed Design: Friendly, colorful interface for a joyful experience.
+##🎨 Sweet-themed Design: Friendly, colorful interface for a joyful experience.
 
-🧪 Test-Driven Development (TDD): Reliable, maintainable codebase.
+##🧪 Test-Driven Development (TDD): Reliable, maintainable codebase.
 
-🖥️ Frontend
+#**🖥️ Frontend**
 
-The frontend is built using React and Tailwind CSS with motion/react for animations:
+##The frontend is built using React and Tailwind CSS with motion/react for animations:
 
 Home Page: Welcoming screen with navigation links.
 
 About Page: Explains system benefits and features.
 
-⚙️ Backend
+#**⚙️ Backend**
 
 The backend is built using Node.js, Express, and MongoDB:
 
@@ -39,7 +39,7 @@ Inventory Routes: Manage stock, restock notifications, and orders.
 JWT Authentication: Ensures secure API endpoints.
 
 
-📁 Project Structure
+#**📁 Project Structure**
 TDD-Kata-Sweet-Shop-Management-System/
 ├── client/                  # Frontend React app
 │   ├── src/
@@ -54,15 +54,15 @@ TDD-Kata-Sweet-Shop-Management-System/
 └── README.md                # Project documentation
 
 
-⚡ Installation & Setup
+#**⚡ Installation & Setup**
 
-Clone the repository:
+##Clone the repository:
 
 git clone https://github.com/akshaymairal04/TDD-Kata-Sweet-Shop-Management-System.git
 cd TDD-Kata-Sweet-Shop-Management-System
 
 
-Install dependencies:
+##Install dependencies:
 
 # Frontend
 cd client
@@ -73,14 +73,14 @@ cd ../server
 npm install
 
 
-Setup environment variables:
+##Setup environment variables:
 Create a .env file in server/:
 
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret_key
 
 
-Run the application:
+##Run the application:
 
 # Start backend server
 cd server
@@ -91,9 +91,9 @@ cd ../client
 npm start
 
 
-Access the app: Open http://localhost:3000
+##Access the app: Open http://localhost:3000
  in your browser
 
-Login & Register Pages: Secure user authentication forms.
+##Login & Register Pages: Secure user authentication forms.
 
 Dashboard: Displays inventory, orders, and sales data in cards.
