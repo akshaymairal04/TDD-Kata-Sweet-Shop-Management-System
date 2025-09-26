@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../store/slices/authSlice";
+import { motion } from "motion/react";
+
+const MotionDiv = motion("div");
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -14,28 +17,43 @@ function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <form onSubmit={handleSubmit} className="bg-white p-8 rounded shadow-md w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="mb-4 w-full p-2 border rounded"
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="mb-4 w-full p-2 border rounded"
-        />
-        <button type="submit" className="w-full bg-indigo-600 text-white py-2 rounded">
-          {loading ? "Logging in..." : "Login"}
-        </button>
-        {error && <p className="text-red-500 mt-2 text-sm">{error}</p>}
-      </form>
+    <div className="min-h-screen flex items-center justify-center bg-pink-50 px-4">
+      <MotionDiv
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 0.6 }}
+        className="bg-white p-8 rounded-xl shadow-lg w-full max-w-md"
+      >
+        <h2 className="text-3xl font-bold mb-6 text-center text-pink-600">
+          Login
+        </h2>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full p-3 border border-pink-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="w-full p-3 border border-pink-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
+          />
+          <button
+            type="submit"
+            className="w-full bg-pink-600 text-white py-3 rounded-lg shadow hover:bg-pink-700 transition"
+            disabled={loading}
+          >
+            {loading ? "Logging in..." : "Login"}
+          </button>
+          {error && (
+            <p className="text-red-500 mt-2 text-sm text-center">{error}</p>
+          )}
+        </form>
+      </MotionDiv>
     </div>
   );
 }
